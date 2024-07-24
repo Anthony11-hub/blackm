@@ -2,6 +2,43 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/client/utils/nav.ts":
+/*!*********************************!*\
+  !*** ./src/client/utils/nav.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const navToggler = document.querySelectorAll("[data-nav-toggler]");
+const navbar = document.querySelector("[data-navbar]");
+const overlay = document.querySelector("[data-overlay]");
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const header = document.querySelector("[data-header]");
+navToggler.forEach((navTogglerItem) => {
+    navTogglerItem.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
+});
+navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+        navbar.classList.remove("active");
+        overlay.classList.remove("active");
+    });
+});
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        header.classList.add("active");
+    }
+    else {
+        header.classList.remove("active");
+    }
+});
+
+
+
+/***/ }),
+
 /***/ "./src/client/vendors/swiper.ts":
 /*!**************************************!*\
   !*** ./src/client/vendors/swiper.ts ***!
@@ -361,6 +398,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendors_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendors/swiper */ "./src/client/vendors/swiper.ts");
 /* harmony import */ var _vendors_swiper__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendors_swiper__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/nav */ "./src/client/utils/nav.ts");
+
 
 
 /******/ })()

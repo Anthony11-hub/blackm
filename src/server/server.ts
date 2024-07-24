@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from "express";
+import express from "express";
 import cors from "cors";
 import path from "path";
 
@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// import pages from "./routes/pages";
+import pages from "./routes/pages";
 
 app.set("view engine", "ejs");
 
@@ -15,9 +15,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "../../dist")));
 app.use(express.static(path.join(__dirname, "../../public")));
 
-app.use("/", (req: Request, res: Response, next: NextFunction) => {
-  res.render("home");
-});
+app.use("/", pages);
 
 const PORT: number = 3000;
 

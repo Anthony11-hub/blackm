@@ -20,7 +20,8 @@
     --go-green_50: hsla(145, 63%, 42%, 0.5);
     --go-green_8: hsla(145, 63%, 42%, 0.08);
     --go-green_5: hsla(145, 63%, 42%, 0.05);
-    --light-gray: hsl(0, 0%, 80%);
+    /* --light-gray: hsl(0, 0%, 80%); */
+    --light-gray: #f1f1f1;
     --mint-cream: hsl(160, 100%, 98%);
     --cultured: hsl(0, 0%, 93%);
     --go-green: hsl(145, 63%, 42%);
@@ -114,7 +115,6 @@ a:hover {
 
 a,
 span,
-input,
 button,
 ion-icon {
     display: block;
@@ -153,11 +153,11 @@ input {
     cursor: pointer;
 }
 
-input,
+/* input,
 select,
 textarea {
     width: 100%;
-}
+} */
 
 :focus-visible {
     outline-offset: 4px;
@@ -595,18 +595,7 @@ textarea {
 }
 
 .recents .container .view-all-link {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    justify-content: center;
-}
-
-.recents .container .view-all-link a {
-    font-size: var(--fs-9);
-}
-
-.recents .container .view-all-link span {
-    font-size: 4rem;
+    color: var(--color-purple-dark);
 }
 
 .recents .slide-content {
@@ -764,6 +753,150 @@ textarea {
     margin-inline: auto;
     background-color: var(--color-purple-dark);
 }
+
+/* MARKET */
+.market {
+    padding-block-end: 4rem;
+}
+
+.market .container .pagination {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 2rem;
+    display: none;
+}
+
+.not-found p {
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.not-found .active {
+    display: block;
+}
+
+.market .container .not-found a {
+    padding: .7rem 3rem;
+    color: var(--rich-black-fogra-29-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: underline;
+}
+
+.market .container .pagination button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 2.7rem;
+    border: 1px solid var(--rich-black-fogra-29-1);
+    border-radius: .5rem;
+    color: var(--white);
+    background-color: var(--rich-black-fogra-29-1);
+}
+
+.market .container .pagination button ion-icon {
+    font-size: 3rem;
+}
+
+.market .product-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.market .product-container .market-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.market .market-grid .product-card .card-content {
+    box-shadow: var(--shadow-2);
+}
+
+.market .market-grid .product-card .img-box {
+    box-shadow: var(--shadow-1);
+}
+
+.market .product-container .product-filters {
+    display: none;
+}
+
+.filter-box {
+    padding: 2rem;
+    background-color: var(--light-gray);
+    position: sticky;
+    top: 10rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.market .product-container .product-filters .section-text {
+    border-bottom: 1px solid var(--rich-black-fogra-39);
+}
+
+.market .product-container .product-filters .filter-list {
+    padding: 1rem;
+}
+
+.products-filter-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-filter-title .filter-btn .img-box {
+    width: 25px;
+}
+
+.products-filter-title select {
+    padding: .5rem 1.6rem;
+    border: 1px solid var(--cultured);
+}
+
+.products-filter-title .title-link {
+    text-transform: uppercase;
+    font-weight: var(--fw-600);
+    border-bottom: 1px solid var(--rich-black-fogra-29-1);
+}
+
+.products-filter-title .filter-sort {
+    display: none;
+}
+
+.products-filter-title .filter-sort div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.product-filters .filter-category {
+    padding-top: 1.5rem;
+}
+
+.product-filters .filter-category select {
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    width: 100%;
+    border-radius: .5rem;
+}
+
 
 /* FOOTER */
 
@@ -941,6 +1074,11 @@ textarea {
         display: block;
     }
 
+    /* Market */
+    .market .product-container .market-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -1081,6 +1219,22 @@ textarea {
         font-size: var(--fs-9);
     }
 
+    /* market */
+    .market .product-container {
+        grid-template-columns: .3fr 1fr;
+    }
+
+    .market .product-container .product-filters {
+        display: block;
+    }
+
+    .products-filter-title .filter-btn {
+        display: none;
+    }
+
+    .products-filter-title .filter-sort {
+        display: block;
+    }
 
     /**
    * FOOTER

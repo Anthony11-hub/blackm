@@ -1,55 +1,71 @@
 <%- include('includes/head') %> <%- include('includes/header') %>
-<section class="category" style="padding-block-start: 13rem">
+<section class="category" style="padding-block-start: 12rem">
   <div class="slide-container swiper container">
     <div class="slide-content">
       <div class="swiper-wrapper category-list">
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/electronic.jpg" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/electronic.jpg?updatedAt=1721999103148"
+              alt="" />
           </div>
           <p class="section-text">Electronics</p>
         </a>
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/fashion.png" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/fashion.png?updatedAt=1721999103977"
+              alt="" />
           </div>
           <p class="section-text">Fashion</p>
         </a>
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/furniture.png" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/furniture.png?updatedAt=1721999100815"
+              alt="" />
           </div>
-          <p class="section-text">Home & Garden</p>
+          <p class="section-text">Home</p>
         </a>
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/health.jpg" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/health.jpg?updatedAt=1721999103971"
+              alt="" />
           </div>
-          <p class="section-text">Health & Beauty</p>
+          <p class="section-text">Health</p>
         </a>
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/vehicle.jpg" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/vehicle.jpg?updatedAt=1721999103685"
+              alt="" />
           </div>
           <p class="section-text">Vehicles</p>
         </a>
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/book.jpg" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/book.jpg?updatedAt=1721999105611"
+              alt="" />
           </div>
-          <p class="section-text">Books & Movies</p>
+          <p class="section-text">Books</p>
         </a>
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/sports.jpg" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/sports.jpg?updatedAt=1721999104349"
+              alt="" />
           </div>
-          <p class="section-text">Sports & Outdoors</p>
+          <p class="section-text">Sports</p>
         </a>
         <a href="#" class="card swiper-slide">
           <div class="img-box">
-            <img src="/images/category/toys.jpg" alt="" />
+            <img
+              src="https://ik.imagekit.io/2ofxhdt8w8/tr:w-600/blackm/toys.jpg?updatedAt=1721999103143"
+              alt="" />
           </div>
-          <p class="section-text">Toys & Hobbies</p>
+          <p class="section-text">Hobbies</p>
         </a>
       </div>
     </div>
@@ -59,255 +75,163 @@
   <div class="container">
     <div class="products-filter-title">
       <h1 class="h1">Product Listings</h1>
-      <!-- <a href="#" class="title-link">Store</a> -->
-      <div class="filter-sort">
-        <div>
-          <p class="section-text">Sort</p>
-          <select name="sort" id="">
-            <option value="">Default</option>
-            <option value="-title">Ascending, A-Z</option>
-            <option value="title">Descending, Z-A</option>
-            <option value="-price">Price, High to Low</option>
-            <option value="price">Price, Low to High</option>
-            <option value="-createdAt">Date, New to Old</option>
-            <option value="createdAt">Date, Old to New</option>
-          </select>
-        </div>
-      </div>
-      <button class="filter-btn">
-        <div class="img-box">
-          <img src="/images/svg/filter.svg" alt="" width="120" />
-        </div>
+      <button id="open-modal-btn" class="filter-btn">
+        <p class="section-text">Filter</p>
+        <img src="/images/svg/filter.svg" alt="" />
       </button>
     </div>
-    <div class="product-container">
-      <div class="product-filters">
-        <div class="filter-box">
-          <div class="filter">
-            <p class="section-text">Category</p>
-            <ul class="filter-list">
-              <li>
-                <input
-                  type="checkbox"
-                  id="electronics"
-                  name="category"
-                  value="Electronics" />
-                <label for="Electronics">Electronics</label>
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  id="fashion"
-                  name="category"
-                  value="Fashion" />
-                <label for="Fashion">Fashion</label>
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  id="home"
-                  name="category"
-                  value="Home & Garden" />
-                <label for="Home & Garden">Home & Garden</label>
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  id="health"
-                  name="category"
-                  value="Health & Beauty" />
-                <label for="Health & Beauty">Health & Beauty</label>
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  id="vehicles"
-                  name="category"
-                  value="Vehicles" />
-                <label for="Vehicles">Vehicles</label>
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  id="books"
-                  name="category"
-                  value="Books & Movies" />
-                <label for="Books & Movies">Books & Movies</label>
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  id="sports"
-                  name="category"
-                  value="sports & outdoors" />
-                <label for="converse">Sports & Outdoors</label>
-              </li>
-              <li>
-                <input
-                  type="checkbox"
-                  id="toys"
-                  name="category"
-                  value="toys & hobbies" />
-                <label for="Toys & Hobbies">Toys & Hobbies</label>
-              </li>
-            </ul>
-          </div>
+    <div class="not-found">
+      <p class="section-text">Sorry, no products found</p>
+      <a href="/products"
+        >Continue Shopping
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </a>
+    </div>
+    <div class="view-grid">
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
         </div>
-      </div>
-      <!-- the actual products -->
-      <div class="not-found">
-        <p class="section-text">Sorry, no products found</p>
-        <a href="/products"
-          >Continue Shopping
-          <ion-icon name="arrow-forward-outline"></ion-icon>
-        </a>
-      </div>
-      <div class="market-grid">
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-        <a href="/market" class="product-card swiper-slide">
-          <div class="img-box">
-            <img src="/images/products/p8.jpg" alt="" />
-            <button class="wishlist-btn">
-              <ion-icon name="heart-outline"></ion-icon>
-            </button>
-          </div>
-          <div class="card-content">
-            <p class="section-text">Nike Air Force 1's</p>
-            <p class="price">Ksh 3,000</p>
-            <p class="location small-text">
-              <ion-icon name="location-sharp"></ion-icon>
-              Nairobi, Nairobi Central
-            </p>
-          </div>
-        </a>
-      </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
+      <a href="/market" class="product-card swiper-slide">
+        <div class="img-box">
+          <img src="/images/products/p8.jpg" alt="" />
+          <button class="wishlist-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="card-content">
+          <p class="section-text">Nike Air Force 1's</p>
+          <p class="price">Ksh 3,000</p>
+          <p class="location small-text">
+            <ion-icon name="location-sharp"></ion-icon>
+            Nairobi, Nairobi Central
+          </p>
+        </div>
+      </a>
     </div>
     <!-- pagination -->
     <div class="pagination">
@@ -322,4 +246,83 @@
     </div>
   </div>
 </section>
+<!-- modal -->
+<div id="open-modal" class="modal-window">
+  <div class="modal-container">
+    <div class="modal-heading">
+      <h1 class="h1">Filter Products</h1>
+      <button id="close-modal-btn">
+        <img src="/images/svg/cancel.svg" alt="" />
+      </button>
+    </div>
+    <form id="filter-form">
+      <!-- Price Filter -->
+      <div class="split-filter">
+        <div>
+          <label for="min-price">Min Price:</label>
+          <input type="number" id="min-price" name="min-price" min="0" />
+        </div>
+        <div>
+          <label for="max-price">Max Price:</label>
+          <input type="number" id="max-price" name="max-price" min="0" />
+        </div>
+      </div>
+      <!-- Category Filter -->
+      <div>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+          <option value="">Select Category</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+          <option value="home-garden">Home & Garden</option>
+          <option value="health-beauty">Health & Beauty</option>
+          <option value="sports-outdoors">Sports & Outdoors</option>
+          <option value="toys-games">Toys & Games</option>
+          <option value="books-music-movies">Books, Music & Movies</option>
+        </select>
+      </div>
+      <!-- Condition Filter -->
+      <div>
+        <label for="condition">Condition:</label>
+        <select id="condition" name="condition">
+          <option value="">Select Condition</option>
+          <option value="new">New</option>
+          <option value="used">Used</option>
+          <option value="refurbished">Refurbished</option>
+        </select>
+      </div>
+      <!-- Location Filter -->
+      <div>
+        <label for="location">Location:</label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enter location" />
+      </div>
+      <!-- Seller Filter -->
+      <div>
+        <label for="seller">Seller:</label>
+        <select id="seller" name="seller">
+          <option value="">Select Seller</option>
+          <option value="individual">Individual Seller</option>
+          <option value="business">Business</option>
+        </select>
+      </div>
+      <!-- Delivery Options Filter -->
+      <div>
+        <label for="delivery">Delivery:</label>
+        <select id="delivery" name="delivery">
+          <option value="">Select Delivery</option>
+          <option value="local-pickup">Local Pickup</option>
+          <option value="door-delivery">Door delivery</option>
+          <option value="no-shipping">No shipping</option>
+        </select>
+      </div>
+
+      <button type="submit">Apply Filters</button>
+    </form>
+  </div>
+</div>
+
 <%- include('includes/footer') %>

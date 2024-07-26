@@ -39,6 +39,30 @@ window.addEventListener("scroll", () => {
 
 /***/ }),
 
+/***/ "./src/client/utils/popup.ts":
+/*!***********************************!*\
+  !*** ./src/client/utils/popup.ts ***!
+  \***********************************/
+/***/ (() => {
+
+
+const modal = document.getElementById("open-modal");
+const closeModalBtn = document.getElementById("close-modal-btn");
+const openModalBtn = document.getElementById("open-modal-btn");
+openModalBtn.addEventListener("click", () => {
+    modal.style.visibility = "visible";
+    modal.style.opacity = "1";
+    modal.style.pointerEvents = "auto";
+});
+closeModalBtn.addEventListener("click", () => {
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+});
+
+
+/***/ }),
+
 /***/ "./src/client/vendors/swiper.ts":
 /*!**************************************!*\
   !*** ./src/client/vendors/swiper.ts ***!
@@ -399,6 +423,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendors_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendors/swiper */ "./src/client/vendors/swiper.ts");
 /* harmony import */ var _vendors_swiper__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendors_swiper__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/nav */ "./src/client/utils/nav.ts");
+/* harmony import */ var _utils_popup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/popup */ "./src/client/utils/popup.ts");
+/* harmony import */ var _utils_popup__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_utils_popup__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 

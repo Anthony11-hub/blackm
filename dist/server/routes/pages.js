@@ -8,4 +8,7 @@ router.get("/", (req, res, next) => {
 router.get("/market", (req, res, next) => {
     res.render("market");
 });
+router.get("/product", (req, res, next) => {
+    res.render("product");
+});
 exports.default = router;

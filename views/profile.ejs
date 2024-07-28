@@ -1,0 +1,65 @@
+<%- include('includes/head') %> <%- include('includes/account-header') %>
+<section class="section profile">
+  <div class="container">
+    <div class="profile-header">
+      <h1 class="section-title">Profile Details</h1>
+      <p class="section-text">Manage your profile here</p>
+    </div>
+    <div class="profile-icon-box">
+      <div class="img-box">
+        <img
+          src="https://api.dicebear.com/8.x/initials/svg?seed=John Doe"
+          alt="avatar profile" />
+      </div>
+      <div class="profile-content">
+        <p class="section-title">John Doe</p>
+        <a href="/auth/logout">Logout</a>
+      </div>
+    </div>
+    <form id="userProfileForm">
+      <label for="fullname">Full names: </label>
+      <input
+        type="text"
+        placeholder="your full name"
+        name="fullname"
+        value=""
+        required />
+      <label for="email">Your Email: </label>
+      <input
+        type="email"
+        placeholder="your email"
+        name="email"
+        value=""
+        required
+        readonly />
+      <div class="user-details">
+        <div class="user-details-input">
+          <label for="address">Country/Region:</label>
+          <select id="country" name="region">
+            <option value="" selected>Choose country</option>
+          </select>
+        </div>
+        <div class="user-details-input">
+          <label for="countryCode">Country Code:</label>
+          <select id="countryCode" name="countryCode">
+            <option value="" selected>Pick the country code:</option>
+          </select>
+        </div>
+      </div>
+      <div class="user-details-input">
+        <label for="city">City: </label>
+        <input type="text" placeholder="city" name="city" value="" />
+      </div>
+      <label for="address">phone number:</label>
+      <input type="text" placeholder="Phone number" name="phone" value="" />
+      <div class="formBtns">
+        <a href="#">
+          <ion-icon name="warning-outline"></ion-icon>
+          <p>Delete Profile</p>
+        </a>
+        <button id="userProfileUpdateBtn" type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+</section>
+<%- include('includes/footer') %>

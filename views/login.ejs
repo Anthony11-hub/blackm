@@ -1,0 +1,16 @@
+<%- include('includes/head') %> <%- include('includes/header') %>
+<div class="login">
+  <form id="loginForm">
+    <h1 class="h1">
+      <a href="#"> Login </a>
+    </h1>
+    <input type="email" placeholder="your email" name="email" required />
+    <input type="password" placeholder="password" name="password" required />
+    <button type="button" id="loginBtn">Login</button>
+    <a href="/requestLink" class="forgot-password">Forgot password?</a>
+    <p class="section-text">
+      Not registered? <a href="/register">Sign Up Today</a>
+    </p>
+  </form>
+</div>
+<%- include('includes/footer') %>

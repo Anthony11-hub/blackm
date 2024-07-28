@@ -1,0 +1,16 @@
+<%- include('includes/head') %> <%- include('includes/header') %>
+<div class="login">
+  <form id="requestLinkForm">
+    <h1 class="h1">
+      <a href="#"> Password Reset </a>
+    </h1>
+    <input
+      type="hidden"
+      name="redirectUrl"
+      value="http://localhost:3000/resetPassword" />
+    <input type="email" placeholder="your email" name="email" required />
+    <button type="button" id="requestLinkBtn">Request Link</button>
+    <a href="/login" class="forgot-password">back to login?</a>
+  </form>
+</div>
+<%- include('includes/footer') %>

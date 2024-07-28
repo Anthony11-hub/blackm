@@ -2,11 +2,17 @@
 <section class="product-details">
   <div class="container">
     <div class="breadcrumb">
-      <a href="#">Home</a>
+      <a href="#">
+        <p class="section-text">Market</p>
+      </a>
       <span>&#47;</span>
-      <a href="#">Market</a>
+      <a href="#">
+        <p class="section-text">Electronics</p>
+      </a>
       <span>&#47;</span>
-      <a href="#">Samsung Galaxy S21 Ultra</a>
+      <a href="#">
+        <p class="section-text">Samsung Galaxy S21 Ultra</p>
+      </a>
     </div>
     <div class="product-detail-container">
       <div class="image-container">
@@ -43,51 +49,111 @@
         </div>
       </div>
       <div class="product-content">
-        <p class="section-text">
+        <p class="location section-text">
           <ion-icon name="location"></ion-icon>
           Nairobi, Nairobi Central
         </p>
-        <h1 class="h1">Samsung Galaxy S21 Ultra</h1>
-        <p class="">
-          <ion-icon name="briefcase"></ion-icon>
-          Business Entity
-        </p>
-        <h1 class="h1">Ksh 12,000</h1>
-        <p class="">Condition: Refurbished</p>
+        <h1 class="product-title h1">Samsung Galaxy S21 Ultra</h1>
+        <h1 class="price h1">Ksh 12,000</h1>
         <p class="description">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem
           aliquam perferendis provident, error unde.
         </p>
+        <ul>
+          <li>
+            <div class="accordion-container">
+              <button class="card-action" data-accordion>
+                <p class="card-title">Details</p>
+                <div class="action-icon">
+                  <ion-icon
+                    name="add-outline"
+                    aria-hidden="true"
+                    class="open"></ion-icon>
+                  <ion-icon
+                    name="remove-outline"
+                    aria-hidden="true"
+                    class="close"></ion-icon>
+                </div>
+              </button>
+              <div class="card-content">
+                <p class="color">
+                  -
+                  <!-- <ion-icon name="briefcase"></ion-icon> -->
+                  Blue Color
+                </p>
+                <p class="brand">
+                  -
+                  <!-- <ion-icon name="briefcase"></ion-icon> -->
+                  Samsung brand
+                </p>
+                <p class="business-entity">
+                  -
+                  <!-- <ion-icon name="briefcase"></ion-icon> -->
+                  Business Entity
+                </p>
+                <p class="condition">
+                  -
+                  <!-- <ion-icon name="alarm"></ion-icon> -->
+                  Refurbished
+                </p>
+                <p class="shipping">
+                  -
+                  <!-- <ion-icon name="boat"></ion-icon> -->
+                  Free Shipping Offered
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- <p class="description">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci rem
+          aliquam perferendis provident, error unde.
+        </p>
+        <div class="details">
+          <p>Details</p>
+          <p class="business-entity">
+            - <ion-icon name="briefcase"></ion-icon>
+            Business Entity
+          </p>
+          <p class="condition">
+            -
+            <ion-icon name="alarm"></ion-icon>
+            Refurbished
+          </p>
+          <p class="shipping">
+            - <ion-icon name="boat"></ion-icon>
+            Free Shipping Offered
+          </p>
+        </div> -->
         <div class="product-btns">
-          <a href="/" class="btn">
+          <a href="/" class="btn buy-now">
             <ion-icon name="logo-whatsapp"></ion-icon>
-            Buy Now</a
-          >
-          <button class="wishlist-btn">
+            Buy Now
+          </a>
+          <button class="btn wishlist-btn">
             <ion-icon name="heart-outline"></ion-icon>
+            Like item
           </button>
         </div>
-        <p class="">
-          <ion-icon name="boat"></ion-icon>
-          Free Shipping Offerred
-        </p>
+        <button class="btn share-btn">
+          <ion-icon name="copy-outline"></ion-icon>
+          Copy Link
+        </button>
         <div class="security-tips">
-          <p>
+          <p class="security-heading">
             <ion-icon name="shield-checkmark-outline"></ion-icon>
             Security Guidance
           </p>
           <ul>
             <li>
-              1. Always ensure you verify the seller before buying anything
+              Always ensure you verify the buyer’s contact details before
+              transaction
             </li>
+            <li>Choose well-lit, public places for in-person transactions.</li>
+            <li>Use traceable and secure payment methods.</li>
             <li>
-              2. Always ensure you verify the seller before buying anything
-            </li>
-            <li>
-              3. Always ensure you verify the seller before buying anything
-            </li>
-            <li>
-              4. Always ensure you verify the seller before buying anything
+              Refrain from sharing your home address or sensitive personal
+              details.
             </li>
           </ul>
         </div>

@@ -1422,6 +1422,14 @@ textarea {
     box-shadow: var(--shadow-2);
 }
 
+.account-chart .account-chart-header {
+    padding: 2rem 0;
+}
+
+.account-chart .account-chart-header select {
+    padding: .5rem 1rem;
+}
+
 .account-chart canvas {
     display: block;
     width: 100%;
@@ -1530,6 +1538,18 @@ textarea {
 
 .profile .container .profile-icon-box .profile-content p:first-child {
     font-weight: var(--fw-600);
+}
+
+
+.table {
+    padding-block-start: calc(var(--section-padding) + 3rem);
+}
+
+.table .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 /* FOOTER */

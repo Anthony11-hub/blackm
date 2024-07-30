@@ -83,46 +83,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js/auto */ "./node_modules/chart.js/auto/auto.js");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 
-// at first it will show weekly chart data
-function chartData() {
-    return __awaiter(this, void 0, void 0, function* () {
-        /*
-      3 data endpoints
-      1. Clicks every 24hrs/per day
-      2. Likes every 24hrs/per day
-      3. Sales every 24hrs/per day
-      */
-        const data = [
-            { year: 2010, count: 10 },
-            { year: 2011, count: 20 },
-            { year: 2012, count: 15 },
-            { year: 2013, count: 25 },
-            { year: 2014, count: 22 },
-            { year: 2015, count: 30 },
-            { year: 2016, count: 28 },
-        ];
-        const ctx = document.getElementById("account-chart");
+document.addEventListener("DOMContentLoaded", function () {
+    /*
+  3 data endpoints
+  1. Clicks every 24hrs/per day
+  2. Likes every 24hrs/per day
+  3. Sales every 24hrs/per day
+  */
+    var _a;
+    const data = [
+        { date: 2010, count: 10 },
+        { date: 2011, count: 20 },
+        { date: 2012, count: 15 },
+        { date: 2013, count: 25 },
+        { date: 2014, count: 22 },
+        { date: 2015, count: 30 },
+        { date: 2016, count: 28 },
+    ];
+    const views = [
+        { date: 2010, count: 20 },
+        { date: 2011, count: 30 },
+        { date: 2012, count: 5 },
+        { date: 2013, count: 15 },
+        { date: 2014, count: 29 },
+        { date: 2015, count: 40 },
+        { date: 2016, count: 28 },
+    ];
+    const likes = [
+        { date: 2010, count: 10 },
+        { date: 2011, count: 20 },
+        { date: 2012, count: 5 },
+        { date: 2013, count: 15 },
+        { date: 2014, count: 29 },
+        { date: 2015, count: 40 },
+        { date: 2016, count: 28 },
+    ];
+    const ctx = document.getElementById("account-chart");
+    let chart;
+    // at first it will show weekly chart data
+    function chartData(selectedData) {
+        if (chart) {
+            chart.destroy();
+        }
         if (ctx) {
-            new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](ctx, {
-                type: "line",
+            const config = {
+                type: "bar",
                 data: {
-                    labels: data.map((row) => row.year),
+                    labels: selectedData.map((row) => row.date),
                     datasets: [
                         {
-                            label: "Account Chart",
-                            data: data.map((row) => row.count),
-                            backgroundColor: "rgba(75, 192, 192, 0.2)",
-                            borderColor: "rgba(75, 192, 192, 1)",
+                            label: "Chart Data",
+                            data: selectedData.map((row) => row.count),
+                            backgroundColor: "rgba(75, 192, 192, 0.2)", // Light Blue
+                            borderColor: "rgba(75, 192, 192, 1)", // Dark Blue
                             borderWidth: 1,
                         },
                     ],
@@ -134,12 +148,33 @@ function chartData() {
                         },
                     },
                 },
-            });
+            };
+            chart = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](ctx, config);
         }
+    }
+    (_a = document
+        .getElementById("chart-data-type")) === null || _a === void 0 ? void 0 : _a.addEventListener("change", (e) => {
+        const selectedChartDataType = e.target.value;
+        let selectedData;
+        switch (selectedChartDataType) {
+            case "revenue":
+                selectedData = data;
+                break;
+            case "views":
+                selectedData = views;
+                break;
+            case "likes":
+                selectedData = likes;
+                break;
+            default:
+                selectedData = data;
+        }
+        chartData(selectedData);
     });
-}
+    chartData(data);
+});
 // Ensure the DOM is fully loaded before running the chartData function
-document.addEventListener("DOMContentLoaded", chartData);
+// document.addEventListener("DOMContentLoaded", chartData);
 
 
 /***/ }),
